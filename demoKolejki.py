@@ -32,3 +32,18 @@ print(list(lista))
 print(lista.pop(False)) #pobiera z początku
 lista.sort(reverse=True) # sortuje liste w odwrotnym porządku
 print(list(lista)) 
+
+from collections import deque
+
+kolejka = deque(maxlen=3) # tworzy kolejkę ograniczoną do trzech elementów
+kolejka.append('ala')
+kolejka.append('ma')
+kolejka.append('kota')
+kolejka.append('a')
+print(list(kolejka)) # nie starczyło miejsca, więc wypchnął element
+print(kolejka.popleft())
+print(list(kolejka))
+kolejka.append('kot')
+print(list(kolejka))
+kolejka.appendleft('ma') # wszedł z lewej, ale wypchnął tego z prawej
+print(list(kolejka))
