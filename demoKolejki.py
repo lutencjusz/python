@@ -47,3 +47,5 @@ kolejka.append('kot')
 print(list(kolejka))
 kolejka.appendleft('ma') # wszedł z lewej, ale wypchnął tego z prawej
 print(list(kolejka))
+
+import heapq
