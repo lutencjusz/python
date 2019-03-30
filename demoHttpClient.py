@@ -1,5 +1,7 @@
 import requests
 
+klucz = ''# insert your own key to airly as string
+
 url='https://jsonplaceholder.typicode.com/posts'
 
 response = requests.get(url)
@@ -15,7 +17,7 @@ print ("******************")
 print("userID: " + str(j[0]['userId'])) 
 
 url='https://airapi.airly.eu/v2/measurements/installation?installationId=6532'
-headers = {'Accept': 'application/json', 'apikey':'WZDiLQVB5GkGODEV5aX3WWA6rko5zn8f'} 
+headers = {'Accept': 'application/json', 'apikey':klucz} 
 r2 = requests.get(url, headers = headers)
 j2 = r2.json()
 print ("******************")
