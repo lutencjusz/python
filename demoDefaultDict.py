@@ -30,3 +30,5 @@ print(lista.pop()) # pobiera z końca
 lista.reverse() # odwraca listę
 print(list(lista))
 print(lista.pop(False)) #pobiera z początku
+lista.sort(reverse=True) # sortuje liste w odwrotnym porządku
+print(list(lista)) 
