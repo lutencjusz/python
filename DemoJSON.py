@@ -2,6 +2,6 @@ import json
 data = {"jsonKey": "jsonValue","title": "hello world"}
 print (json.dumps(data, indent=4, separators=(". ", " = ")))
 
-with open('Demo/ustawieniaZ.json') as jsonData:
+with open('C:\Data\python\Demo_i_kurs\python\parametryCz.json') as jsonData:
     d = json.load(jsonData)
-    print("klucz: "+d["ssid"])
+    print("VcMin: "+str(d["VcMin"]))
