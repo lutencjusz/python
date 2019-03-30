@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+print('***defaultdict***')
 mq = defaultdict()
 mq['1']='123'
 mq['2']='234'
@@ -19,6 +20,7 @@ print(mq.pop('2')) # zdejmule z listy elemenent o kluczu 2 i pokazuje wartość
 print(list(mq.items()))
 
 
+print('***zwykła lista :-)***')
 lista = [] # ze wzgledów pamięciowych nie jest optymalna
 lista.append(3)
 lista.append(4)
@@ -35,6 +37,7 @@ print(list(lista))
 
 from collections import deque
 
+print("***deque***")
 kolejka = deque(maxlen=3) # tworzy kolejkę ograniczoną do trzech elementów
 kolejka.append('ala')
 kolejka.append('ma')
@@ -49,3 +52,14 @@ kolejka.appendleft('ma') # wszedł z lewej, ale wypchnął tego z prawej
 print(list(kolejka))
 
 import heapq
+import random
+print ('***heapq***')
+liczby = [random.randint(1,100) for i in range(20)] # tworzy 20 losowych liczb w tablicy
+print(list(liczby))
+heapq.heapify(liczby)
+print(heapq.nlargest(5, liczby)) # podaje pięc największych
+print(heapq.nsmallest(4, liczby))
+print(heapq.heappop(liczby)) # trwale pobiera najmniejszy element z liczby
+print(heapq.nsmallest(5, liczby)) # podaje pięc największych
+heapq.heappush(liczby, 101) # dodaje do liczby 101
+print(heapq.nlargest(5, liczby)) 
