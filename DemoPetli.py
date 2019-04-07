@@ -57,8 +57,13 @@ print('***słownik***')
 for i in zip(litery, liczby): # słownik
     print(i)
 
+import json
 print('***zip***')
-z = dict(zip(litery, liczby))
+z = dict(zip(litery, liczby)) # tworzy JSON z dwóch tablic
+zJSON = json.dumps(z) # konwerutje na string
+print('zJSON: ' + zJSON)
+print (json.dumps(z, indent=4, separators=(". ", " = ")))
+print ('z.a: '+ str(z['a']))
 print(z) # w formacie json
 print([*z])
 
